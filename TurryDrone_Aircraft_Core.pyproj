@@ -21,7 +21,28 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="DimensionalProperties\AttData.py" />
+    <Compile Include="DimensionalProperties\FltData.py" />
+    <Compile Include="DimensionalProperties\MiscData.py" />
+    <Compile Include="DimensionalProperties\PosData.py" />
+    <Compile Include="DimensionalProperties\__init__.py" />
+    <Compile Include="Hardware\BarometricAltimeterSensorModule.py" />
+    <Compile Include="Hardware\BatterySensorModule.py" />
+    <Compile Include="Hardware\GPSSensorModule.py" />
+    <Compile Include="Hardware\IMUSensorModule.py" />
+    <Compile Include="Hardware\ServoElevonActuatorModule.py" />
+    <Compile Include="Hardware\ServoActuatorModule.py" />
+    <Compile Include="Hardware\__init__.py" />
+    <Compile Include="TNC\AutopilotModule.py" />
+    <Compile Include="TNC\ControlModule.py" />
+    <Compile Include="TNC\TelemetryModule.py" />
+    <Compile Include="TNC\__init__.py" />
     <Compile Include="TurryDrone_Aircraft_Core.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DimensionalProperties\" />
+    <Folder Include="Hardware\" />
+    <Folder Include="TNC\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
