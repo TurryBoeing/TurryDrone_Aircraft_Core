@@ -1,12 +1,14 @@
 #!/usr/bin/python
 from gpiozero import AngularServo
+from gpiozero.pins.pigpio import PiGPIOFactory
 class ServoElevonActuator:
 
     def __init__(self,elevatorPin,aileronPin):
         self.pinForElevator = elevatorPin
         self.pinForAileron = aileronPin
-        self.servoPowerElevonElevator = AngularServo(self.pinForElevator, min_pulse_width=0.0006, max_pulse_width=0.0023)
-        self.servoPowerElevonAileron = AngularServo(self.pinForAileron, min_pulse_width=0.0006, max_pulse_width=0.0023)
+        servoFactory = PiGPIOFactory()
+        self.servoPowerElevonElevator = AngularServo(self.pinForElevator, min_pulse_width=0.0006, max_pulse_width=0.0023,pin_factory=servoFactory)
+        self.servoPowerElevonAileron = AngularServo(self.pinForAileron, min_pulse_width=0.0006, max_pulse_width=0.0023,pin_factory=servoFactory)
 
     def deflectElevons(self,aileronRatio,elevatorRatio):
         elevatorOutput=str(aileronRatio-elevatorRatio)

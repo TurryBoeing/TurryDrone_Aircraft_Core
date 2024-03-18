@@ -11,13 +11,13 @@ from TNC import TelemetryModule
 from TNC import ControlModule
 
 print("##############################")
-print("####TURRYDRONE 2.0 ALPHA 5####")
+print("####TURRYDRONE 2.0 ALPHA 6####")
 print("########CORE PROGRAM##########")
 print("##FEATURES ENABLED: TLM THREAD")
 print("##                  GPS READ  ")
 print("##                  IMU READ  ")
 print("##             BARO ALT READ  ")
-print("##         RC SERVO MOVEMENT  ")
+print("##    RC SERVO MOVE (PiGPIO)  ")
 print("##############################")
 
 time.sleep(1)
